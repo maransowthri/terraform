@@ -2,6 +2,9 @@
 **/.terraform/*
 .terraform.*
 
+# Credentials
+*/creds.tfvars
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
