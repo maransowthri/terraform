@@ -20,6 +20,12 @@ terraform plan
 terraform apply
 ```
 
+## Get the current state and update the state files
+
+```bash
+terraform refresh
+```
+
 ## Destroy all resources created by Terraform under current directory
 
 ``` bash
