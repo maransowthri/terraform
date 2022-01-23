@@ -1,6 +1,9 @@
 resource "aws_instance" "myec2" {
   ami           = "ami-08e4e35cccc6189f4"
-  instance_type = var.instance_type
+  instance_type = var.instance_type[var.az]
+  tags = {
+    "name" = var.names[0]
+  }
 }
 
 resource "aws_eip" "lb" {
