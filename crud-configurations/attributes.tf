@@ -21,7 +21,7 @@ provider "aws" {
   secret_key = var.secret_key
 }
 
-resource "aws_eip" "lb" {
+resource "aws_eip" "lb1" {
   vpc = true
 }
 
