@@ -4,19 +4,19 @@ Terraform Docs: [https://www.terraform.io/cli/commands](https://www.terraform.io
 
 ## Initialize Providers
 
-``` bash
+```bash
 terraform init
 ```
 
 ## Visualize the changes without creating
 
-``` bash
+```bash
 terraform plan
 ```
 
 ## Apply changes
 
-``` bash
+```bash
 terraform apply
 ```
 
@@ -28,12 +28,31 @@ terraform refresh
 
 ## Destroy all resources created by Terraform under current directory
 
-``` bash
+```bash
 terraform destroy
 ```
 
 ## Destroy only specifc resources under current directory
 
-``` bash
+```bash
 terraform destroy -target=resource_type.local_resource_name
+```
+
+## To set the logging level and output path
+
+```bash
+export TF_LOG=TRACE
+export TF_LOG_PATH=./logs
+```
+
+## To format the the Terraform files
+
+```bash
+terraform fmt
+```
+
+## To validate the syntax of the Terraform files
+
+```bash
+terraform validate
 ```
