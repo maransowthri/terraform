@@ -56,3 +56,9 @@ terraform fmt
 ```bash
 terraform validate
 ```
+
+## To recreate resources due to drift
+
+```bash
+terraform taint aws_instance.myec2
+```
