@@ -1,0 +1,81 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_eip.lb (expand)" [label = "aws_eip.lb", shape = "box"]
+		"[root] aws_eip.lb1 (expand)" [label = "aws_eip.lb1", shape = "box"]
+		"[root] aws_eip_association.eip_asso (expand)" [label = "aws_eip_association.eip_asso", shape = "box"]
+		"[root] aws_iam_user.lb (expand)" [label = "aws_iam_user.lb", shape = "box"]
+		"[root] aws_instance.dsEC2 (expand)" [label = "aws_instance.dsEC2", shape = "box"]
+		"[root] aws_instance.functions_ec2 (expand)" [label = "aws_instance.functions_ec2", shape = "box"]
+		"[root] aws_instance.myec2 (expand)" [label = "aws_instance.myec2", shape = "box"]
+		"[root] aws_instance.prod_instance (expand)" [label = "aws_instance.prod_instance", shape = "box"]
+		"[root] aws_instance.sampleEC2 (expand)" [label = "aws_instance.sampleEC2", shape = "box"]
+		"[root] aws_key_pair.loginkey (expand)" [label = "aws_key_pair.loginkey", shape = "box"]
+		"[root] aws_s3_bucket.myS3 (expand)" [label = "aws_s3_bucket.myS3", shape = "box"]
+		"[root] aws_security_group.allow_tls (expand)" [label = "aws_security_group.allow_tls", shape = "box"]
+		"[root] aws_security_group.mySG (expand)" [label = "aws_security_group.mySG", shape = "box"]
+		"[root] data.aws_ami.ami (expand)" [label = "data.aws_ami.ami", shape = "box"]
+		"[root] output.eip" [label = "output.eip", shape = "note"]
+		"[root] output.myS3" [label = "output.myS3", shape = "note"]
+		"[root] output.time" [label = "output.time", shape = "note"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] var.access_key" [label = "var.access_key", shape = "note"]
+		"[root] var.ami_regions" [label = "var.ami_regions", shape = "note"]
+		"[root] var.az" [label = "var.az", shape = "note"]
+		"[root] var.instance_type" [label = "var.instance_type", shape = "note"]
+		"[root] var.is_prod" [label = "var.is_prod", shape = "note"]
+		"[root] var.loadbalancers" [label = "var.loadbalancers", shape = "note"]
+		"[root] var.names" [label = "var.names", shape = "note"]
+		"[root] var.region" [label = "var.region", shape = "note"]
+		"[root] var.secret_key" [label = "var.secret_key", shape = "note"]
+		"[root] var.tags" [label = "var.tags", shape = "note"]
+		"[root] var.vpn_ip" [label = "var.vpn_ip", shape = "note"]
+		"[root] aws_eip.lb (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_eip.lb1 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_eip_association.eip_asso (expand)" -> "[root] aws_eip.lb (expand)"
+		"[root] aws_eip_association.eip_asso (expand)" -> "[root] aws_instance.myec2 (expand)"
+		"[root] aws_iam_user.lb (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_iam_user.lb (expand)" -> "[root] var.loadbalancers"
+		"[root] aws_instance.dsEC2 (expand)" -> "[root] data.aws_ami.ami (expand)"
+		"[root] aws_instance.functions_ec2 (expand)" -> "[root] aws_key_pair.loginkey (expand)"
+		"[root] aws_instance.functions_ec2 (expand)" -> "[root] var.ami_regions"
+		"[root] aws_instance.functions_ec2 (expand)" -> "[root] var.region"
+		"[root] aws_instance.functions_ec2 (expand)" -> "[root] var.tags"
+		"[root] aws_instance.myec2 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_instance.myec2 (expand)" -> "[root] var.az"
+		"[root] aws_instance.myec2 (expand)" -> "[root] var.instance_type"
+		"[root] aws_instance.myec2 (expand)" -> "[root] var.names"
+		"[root] aws_instance.prod_instance (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_instance.prod_instance (expand)" -> "[root] var.is_prod"
+		"[root] aws_instance.sampleEC2 (expand)" -> "[root] local.common_tags (expand)"
+		"[root] aws_instance.sampleEC2 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_key_pair.loginkey (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_s3_bucket.myS3 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.allow_tls (expand)" -> "[root] aws_eip.lb (expand)"
+		"[root] aws_security_group.mySG (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_security_group.mySG (expand)" -> "[root] var.vpn_ip"
+		"[root] data.aws_ami.ami (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] local.common_tags (expand)" -> "[root] var.is_prod"
+		"[root] output.eip" -> "[root] aws_eip.lb (expand)"
+		"[root] output.myS3" -> "[root] aws_s3_bucket.myS3 (expand)"
+		"[root] output.time" -> "[root] local.time (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_eip.lb1 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_eip_association.eip_asso (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_iam_user.lb (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.dsEC2 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.functions_ec2 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.prod_instance (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.sampleEC2 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_s3_bucket.myS3 (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_security_group.allow_tls (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_security_group.mySG (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.access_key"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" -> "[root] var.secret_key"
+		"[root] root" -> "[root] output.eip"
+		"[root] root" -> "[root] output.myS3"
+		"[root] root" -> "[root] output.time"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+	}
+}
+

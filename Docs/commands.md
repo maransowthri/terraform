@@ -38,27 +38,46 @@ terraform destroy
 terraform destroy -target=resource_type.local_resource_name
 ```
 
-## To set the logging level and output path
+## Set logging level and output path
 
 ```bash
 export TF_LOG=TRACE
 export TF_LOG_PATH=./logs
 ```
 
-## To format the the Terraform files
+## Format Terraform files
 
 ```bash
 terraform fmt
 ```
 
-## To validate the syntax of the Terraform files
+## Validate the syntax of the Terraform files
 
 ```bash
 terraform validate
 ```
 
-## To recreate resources due to drift
+## Recreate resources due to drift
 
 ```bash
 terraform taint aws_instance.myec2
+```
+
+## Create a visual representation of the Terraform state
+
+```bash
+terraform graph > graph.dot
+```
+
+## Saving terraform plan into a file to apply it in future
+
+```bash
+terraform plan -out=plan.tfplan
+terraform apply plan.tfplan
+```
+
+## Extract the value of an output variable
+
+```bash
+terraform output my_output_variable
 ```
