@@ -5,6 +5,10 @@
 # Credentials
 creds.tfvars
 
+# Private keys
+*.pem
+*.pub
+
 # .tfstate files
 *.tfstate
 *.tfstate.*

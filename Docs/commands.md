@@ -32,12 +32,6 @@ terraform refresh
 terraform destroy
 ```
 
-## Destroy only specifc resources under current directory
-
-```bash
-terraform destroy -target=resource_type.local_resource_name
-```
-
 ## Set logging level and output path
 
 ```bash
