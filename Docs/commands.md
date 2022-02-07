@@ -75,3 +75,9 @@ terraform apply plan.tfplan
 ```bash
 terraform output my_output_variable
 ```
+
+## Initialization with backens
+
+```bash
+terraform init -backend-config="backend.conf"
+```

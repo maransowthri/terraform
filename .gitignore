@@ -4,6 +4,7 @@
 
 # Credentials
 creds.tfvars
+creds.conf
 
 # Private keys
 *.pem
