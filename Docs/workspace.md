@@ -1,6 +1,6 @@
 # Workspace Commands
 
-Terraform Docs: [https://www.terraform.io/cli/commands](https://www.terraform.io/cli/commands)
+[Terraform Workspace Commands](https://www.terraform.io/cli/commands/workspace)
 
 ## Initialize workspace
 

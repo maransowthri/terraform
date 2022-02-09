@@ -1,6 +1,6 @@
 # Terraform Variables
 
-Terraform Docs: [https://www.terraform.io/language/values/variables](https://www.terraform.io/language/values/variables)
+[Terraform Variables Configs](https://www.terraform.io/language/values/variables)
 
 ## Defining variable with environment variables
 

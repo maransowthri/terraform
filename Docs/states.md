@@ -1,6 +1,6 @@
 # Terraform States
 
-Terraform Docs: [https://www.terraform.io/language/values/variables](https://www.terraform.io/language/state)
+[Terraform State Configs](https://www.terraform.io/language/state)
 
 ## List down the states (basically running resources created from terraform)
 

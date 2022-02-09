@@ -1,6 +1,6 @@
 # Below flags can be passed along with terraform command to control the behavior
 
-Terraform Docs: [https://www.terraform.io/cli/commands](https://www.terraform.io/cli/commands)
+[Terraform Commands](https://www.terraform.io/cli/commands)
 
 ## Skip yes / no prompt
 

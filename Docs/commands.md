@@ -1,6 +1,6 @@
 # Terraform Commands
 
-Terraform Docs: [https://www.terraform.io/cli/commands](https://www.terraform.io/cli/commands)
+[Terraform Docs](https://www.terraform.io/cli/commands)
 
 ## Initialize Providers
 
