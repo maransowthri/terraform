@@ -81,3 +81,9 @@ terraform output my_output_variable
 ```bash
 terraform init -backend-config="backend.conf"
 ```
+
+## Importing a manually created resource into terraform state file
+
+```bash
+terraform import aws_instance.myec2 my_instance_id
+```
