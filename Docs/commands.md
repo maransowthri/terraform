@@ -87,3 +87,15 @@ terraform init -backend-config="backend.conf"
 ```bash
 terraform import aws_instance.myec2 my_instance_id
 ```
+
+## Upgrade terraform provider to the latest version
+
+```bash
+terraform init -upgrade
+```
+
+## Manually force unlock state files
+
+```bash
+terraform force-unlock lock_id
+```
