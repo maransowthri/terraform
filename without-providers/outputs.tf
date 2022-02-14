@@ -1,5 +1,6 @@
 locals {
   name = "Hello World!"
+  age  = var.age
 }
 
 variable "age" {
@@ -12,4 +13,8 @@ output "name" {
 
 output "age" {
   value = var.age
+}
+
+output "age_from_local" {
+  value = local.age
 }
