@@ -4,7 +4,8 @@ locals {
 }
 
 variable "age" {
-  default = 10
+  type = string
+  default = 10 // will be accepted though it is a number
 }
 
 output "name" {
