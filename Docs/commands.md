@@ -99,3 +99,9 @@ terraform init -upgrade
 ```bash
 terraform force-unlock lock_id
 ```
+
+## Inspect the state file
+
+```bash
+terraform show
+```
