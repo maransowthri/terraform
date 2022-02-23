@@ -5,6 +5,7 @@
 # Credentials
 creds.tfvars
 creds.conf
+terraform.tfvars
 
 # Private keys
 *.pem
