@@ -4,17 +4,17 @@ locals {
   person = {
     name = "Maran Sowthri Kalailingam"
     address = {
-      street    = "KK Nagar"
+      street = "KK Nagar"
       relatives = [
         {
-          name: "Karan"
-        }, 
+          name : "Karan"
+        },
         {
-          name: "Kalees"
-        }, 
+          name : "Kalees"
+        },
         {
-          name: "Mahesh"
-        }, 
+          name : "Mahesh"
+        },
       ]
     }
   }
@@ -23,12 +23,11 @@ locals {
 }
 
 variable "age" {
-  type    = string
-  default = 10 // will be accepted though it is a number
+  type = string
 }
 
 variable "tuples" {
-  default = [false,"my_vcn","10.0.0.0/16"]
+  default = [false, "my_vcn", "10.0.0.0/16"]
 }
 
 variable "names" {

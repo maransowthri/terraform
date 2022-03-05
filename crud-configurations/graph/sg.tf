@@ -2,8 +2,8 @@ resource "aws_security_group" "sg_for_graph" {
   name = "sg_for_graph"
 
   dynamic "ingress" {
-    foreach = var.ports
-    iterator    = port
+    foreach  = var.ports
+    iterator = port
 
     content {
       description = "TLS from VPC"

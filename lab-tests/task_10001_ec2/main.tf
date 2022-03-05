@@ -24,9 +24,9 @@ resource "aws_security_group" "web-server" {
 }
 
 resource "aws_instance" "web-server" {
-  ami = "ami-02e136e904f3da870"
-  instance_type = "t2.micro"
-  key_name = "whizlabs-key"
+  ami             = "ami-02e136e904f3da870"
+  instance_type   = "t2.micro"
+  key_name        = "whizlabs-key"
   security_groups = ["${aws_security_group.web-server.name}"]
 
   user_data = <<-EOF

@@ -1,5 +1,5 @@
 resource "aws_eip" "myeip1" {
-  vpc    = true
+  vpc = true
 }
 
 resource "aws_eip" "myeip2" {

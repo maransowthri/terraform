@@ -42,9 +42,6 @@ resource "aws_sns_topic_subscription" "topic-subscription" {
   endpoint  = var.endpoint
 }
 
-############ Creating bucket event notification ############
-
-
 resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = aws_s3_bucket.bucket.id
 
