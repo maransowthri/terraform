@@ -23,13 +23,13 @@ terraform apply
 ## Get the current state and update the state files
 
 ```bash
-terraform refresh
+terraform apply -refresh-only
 ```
 
 ## Destroy all resources created by Terraform under current directory
 
 ```bash
-terraform destroy
+terraform destroy (or) terraform apply -destroy
 ```
 
 ## Set logging level and output path
@@ -42,7 +42,7 @@ export TF_LOG_PATH=./logs
 ## Format Terraform files
 
 ```bash
-terraform fmt
+terraform fmt -recursive
 ```
 
 ## Validate the syntax of the Terraform files
@@ -54,7 +54,7 @@ terraform validate
 ## Recreate resources due to drift
 
 ```bash
-terraform taint aws_instance.myec2
+terraform apply -replace aws_instance.myec2
 ```
 
 ## Create a visual representation of the Terraform state
@@ -85,7 +85,7 @@ terraform init -backend-config="backend.conf"
 ## Importing a manually created resource into terraform state file
 
 ```bash
-terraform import aws_instance.myec2 my_instance_id
+terraform import aws_instance.myec2 i-14353435
 ```
 
 ## Upgrade terraform provider to the latest version
