@@ -2,7 +2,7 @@
 
 [Terraform State Configs](https://www.terraform.io/language/state)
 
-## List down the states (basically running resources created from terraform)
+## List down the resources created by terraform
 
 ```bash
 terraform state list
